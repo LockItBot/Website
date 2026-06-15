@@ -16,7 +16,7 @@
         body{
             background:#1e1f22;
             color:white;
-            /* Added top padding to prevent the fixed header from covering your content */
+            /* Keeps content from hiding under the sticky top bar */
             padding-top: 100px; 
         }
 
@@ -28,7 +28,7 @@
             background:#111214;
             border-bottom:1px solid #2b2d31;
             
-            /* FIXED: The floating header rules are now properly grouped inside the header container */
+            /* STABLE FIXED NAVBAR: Stays at the top while scrolling */
             position: fixed;
             top: 0;
             left: 0;
@@ -157,10 +157,10 @@
     </div>
 
     <div class="nav-links">
-        <!-- FIXED: Absolute path completely stops the browser from routing to random external pages -->
-        <a href="https://github.io">Home</a>
+        <!-- FIXED: Back to stable hash link. Safe, unbreakable, keeps you on the page -->
+        <a href="#">Home</a>
         
-        <!-- FIXED: Replace the text inside the quotation marks with your Google Doc link below -->
+        <!-- FIXED: Opens your policies document safely in a new browser tab -->
         <a href="https://docs.google.com/document/d/1G-yj5W_EkmH_G9iXYmuV9Jq0ZOSdO0voSCxn4gDK-eY/edit?usp=sharing" target="_blank">Policies</a>
     </div>
 </header>
@@ -174,7 +174,8 @@
         March 21, 2026.
     </p>
 
-    <a href="https://discord.com" class="invite-btn">
+    <!-- FIXED: Your developer portal client invite link configured to open in a new tab -->
+    <a href="https://discord.com/oauth2/authorize?client_id=1484820730821611633" class="invite-btn" target="_blank">
         Invite Bot
     </a>
 </section>
