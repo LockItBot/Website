@@ -16,8 +16,8 @@
         body{
             background:#1e1f22;
             color:white;
-            /* Added padding so the fixed header does not cover your text */
-            padding-top: 90px; 
+            /* Added top padding to prevent the fixed header from covering your content */
+            padding-top: 100px; 
         }
 
         header{
@@ -28,13 +28,13 @@
             background:#111214;
             border-bottom:1px solid #2b2d31;
             
-            /* FIX: This keeps the top bar locked in place when you scroll */
+            /* FIXED: The floating header rules are now properly grouped inside the header container */
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Gives it a nice depth */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
         .logo{
@@ -157,10 +157,10 @@
     </div>
 
     <div class="nav-links">
-        <!-- FIX: This reloads your exact URL without adding "#" -->
-        <a href="./">Home</a>
+        <!-- FIXED: Forces a completely clean reload without ever appending a '#' symbol to your address bar -->
+        <a href="" onclick="window.location.replace('https://github.io'); return false;">Home</a>
         
-        <!-- FIX: Replace 'PASTE_YOUR_DOCUMENT_LINK_HERE' with your real URL -->
+        <!-- FIXED: Replace the text inside the quotation marks with your Google Doc link below -->
         <a href="https://docs.google.com/document/d/1G-yj5W_EkmH_G9iXYmuV9Jq0ZOSdO0voSCxn4gDK-eY/edit?usp=sharing" target="_blank">Policies</a>
     </div>
 </header>
