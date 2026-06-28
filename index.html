@@ -28,11 +28,11 @@
             background:#111214;
             border-bottom:1px solid #2b2d31;
             
-            /* STABLE FIXED NAVBAR: Stays at the top while scrolling */
+            /* FIXED NAVBAR BUG: Using left/right 0 prevents horizontal layout breaking */
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            right: 0;
             z-index: 1000;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
@@ -157,8 +157,9 @@
     </div>
 
     <div class="nav-links">
-        <!-- FIXED: Opens your policies document safely in a new browser tab -->
-        <a href="https://docs.google.com/document/d/1G-yj5W_EkmH_G9iXYmuV9Jq0ZOSdO0voSCxn4gDK-eY/edit?usp=sharing" target="_blank">Policies</a>
+        <a href="https://docs.google.com/document/d/1G-yj5W_EkmH_G9iXYmuV9Jq0ZOSdO0voSCxn4gDK-eY/edit?usp=sharing" target="_blank" rel="noopener">Policies</a>
+        <!-- NOTE: Swap google.com with your actual application link when ready -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3l1kBxaJ0JykGqGKAf4SmNoSi1-OlZX48JsMdwxjUr6Uzig/viewform?usp=publish-editor" target="_blank" rel="noopener">Job Form</a>
     </div>
 </header>
 
@@ -171,8 +172,7 @@
         March 21, 2026.
     </p>
 
-    <!-- FIXED: Your developer portal client invite link configured to open in a new tab -->
-    <a href="https://discord.com/oauth2/authorize?client_id=1484820730821611633" class="invite-btn" target="_blank">
+    <a href="https://discord.com/oauth2/authorize?client_id=1484820730821611633" class="invite-btn" target="_blank" rel="noopener">
         Invite Bot
     </a>
 </section>
